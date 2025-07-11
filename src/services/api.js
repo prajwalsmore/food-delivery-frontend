@@ -1,9 +1,12 @@
 import axios from 'axios';
 
 // Use Render backend URL for production, localhost for development
-const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://food-delivery-zz51.onrender.com/api'
-  : 'http://localhost:3000/api';
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api'
+  : 'https://food-delivery-zz51.onrender.com/api';
+
+console.log('API Base URL:', API_BASE_URL);
+console.log('Current hostname:', window.location.hostname);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
