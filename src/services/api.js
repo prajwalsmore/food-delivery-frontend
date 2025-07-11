@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Use Render backend URL for production, localhost for development
 const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://your-render-app-name.onrender.com/api'  // Replace with your actual Render URL
+  ? 'https://food-delivery-zz51.onrender.com/api'
   : 'http://localhost:3000/api';
 
 const api = axios.create({
